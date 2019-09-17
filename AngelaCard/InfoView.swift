@@ -20,6 +20,10 @@ struct InfoView: View {
                 Image(systemName: imageName)
                     .foregroundColor(.green)
                 Text(text)
+                //This line below is required if you want the app to display correctly in dark mode.
+                    //In dark mode all Text is automatically rendered as white.
+                    //So we've created a custom color in the assets folder called Infor Color and used it here. 
+                .foregroundColor(Color("Info Color"))
             })
             .padding(.all)
     }
